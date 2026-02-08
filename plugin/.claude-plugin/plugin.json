@@ -1,0 +1,9 @@
+{
+  "name": "ralph-wiggum",
+  "version": "1.0.0",
+  "description": "Ralph Wiggum technique for Claude Code — iterative AI development loops. Run Claude in a while-true loop with the same prompt until task completion.",
+  "author": {
+    "name": "arshbot",
+    "url": "https://github.com/arshbot/wiggum.sh"
+  }
+}
