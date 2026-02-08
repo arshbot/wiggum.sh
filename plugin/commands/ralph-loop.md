@@ -14,3 +14,15 @@ Bash("${CLAUDE_PLUGIN_ROOT}/scripts/setup-ralph-loop.sh" $ARGUMENTS)
 Please work on the task. When you try to exit, the Ralph loop will feed the SAME PROMPT back to you for the next iteration. You'll see your previous work in files and git history, allowing you to iterate and improve.
 
 CRITICAL RULE: If a completion promise is set, you may ONLY output it when the statement is completely and unequivocally TRUE. Do not output false promises to escape the loop, even if you think you're stuck or should exit for other reasons. The loop is designed to continue until genuine completion.
+
+HANDOFF REQUIREMENT: On your FINAL iteration — immediately before outputting the completion promise — you MUST include a hyper-condensed handoff brief. This is NOT a changelog or list of everything you did. It is a short set of pointers so a human can quickly catch up and verify your work. Think: "where to look, what to poke at, where things are documented."
+
+Format your handoff like this:
+
+## Handoff
+- [How to run/see the thing — e.g. "open localhost:3000 and click through checkout"]
+- [Where known issues or edge cases are tracked — e.g. "open issues in BUGS.md"]
+- [How to run tests or verify — e.g. "npm test — 2 integration tests are slow but passing"]
+- [Any key decisions or gotchas — e.g. "went with SQLite over Postgres, see README"]
+
+Keep it to 3-6 bullets. Each bullet is a starting point for the human to dig in, not a summary of what changed. If there's nothing interesting to call out for a bullet category, skip it.
